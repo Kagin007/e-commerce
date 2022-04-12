@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 
-export default class MainContent extends Component {
+export default class CustomersList extends Component {
   state = {
     pageTitle: "Customers",
     customersCount:5,
@@ -91,10 +91,15 @@ export default class MainContent extends Component {
       }))
     };
 
+    //Executes when the user clicks on "Change Picture" button in the grid
+    //Recieves the "customer" object and index of the currently clicked customer
     onChangePictureClick = (cust, index) => {
+
+      //get existing customer
       var custArr = this.state.customers;
       custArr[index].photo = "https://picsum.photos/id/104/60"
 
+      //update "customers" array in the state
       this.setState({ customers: custArr });
     };
 
