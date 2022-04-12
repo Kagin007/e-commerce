@@ -24,7 +24,9 @@ export default class ShoppingCart extends Component {
             <Product
               key={prod.id}
               product={prod}
-            />
+            >
+              <button className="btn btn-primary">Buy Now</button>
+            </Product>
           );
         })}
       </div>
