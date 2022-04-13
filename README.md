@@ -5,8 +5,8 @@ A small e-commerce app where I practice styling, props, state, routing, promises
 # Screenshots
 
 ![login](https://github.com/Kagin007/e-commerce/blob/master/screenshots/login.png?raw=true)
+![cart](https://github.com/Kagin007/e-commerce/blob/master/screenshots/cart.png?raw=true)
 ![customers](https://github.com/Kagin007/e-commerce/blob/master/screenshots/cuztomers.png?raw=true)
-![]
 
 ## Available Scripts
 
