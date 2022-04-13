@@ -4,7 +4,7 @@ export default class Login extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {email: "", password: ""};
+    this.state = {email: "", password: "", message: ""};
   }
 
   render() {
@@ -18,7 +18,9 @@ export default class Login extends Component {
           <input 
             type="text"
             className="form-control"
-            value={this.state.email}/>          
+            value={this.state.email}
+            onChange={(event)=> {this.setState( {email: event.target.value} )}}
+          />          
         </div>
       {/* Email ends */}
 
@@ -28,11 +30,33 @@ export default class Login extends Component {
           <input 
             type="password"
             className="form-control"
-            value={this.state.password}/>          
+            value={this.state.password}
+            onChange={(event)=> {this.setState( {password: event.target.value} )}}
+          />
         </div>
       {/* Password ends */}
+
+      <div className="text-right">
+        <span>{this.state.message}</span>
+        <button className="btn btn-primary" onClick={this.onLoginClick}>
+          Login
+        </button>
+      </div>
+
     </div>
       // Email ends
     )
+  }
+
+  onLoginClick = () => {
+    console.log(this.state)
+    if(this.state.email === "admin@test.com" && this.state.password === "admin123") {
+      //success
+      this.setState({message: <span className="text-success">Successfully Logged-in</span>})
+    }
+    else {
+      //error
+      this.setState({message: <span className="text-danger">Invalid login, please try again</span>})
+    }
   }
 }
