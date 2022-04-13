@@ -8,6 +8,7 @@ export default class App extends Component {
     return (
     <>
       <NavBar/>
+      <ShoppingCart x="10" />
       <ShoppingCart/>
     </>
   )}

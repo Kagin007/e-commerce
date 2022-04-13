@@ -11,6 +11,13 @@ export default class Product extends Component {
       <div className="card m-2">
         <div className="card-body">
           <div className="text-muted"># {this.state.product.id}</div>
+          <span className="pull-right">
+            <i className="fa fa-times hand-icon"
+              onClick={
+                ()=>{this.props.onDelete(this.state.product)}
+                }>
+            </i>
+          </span>
 
           <h5 className="p-2 border-top">{this.state.product.productName}</h5>
 
@@ -49,5 +56,9 @@ export default class Product extends Component {
       </div>
     </div>
     )
+  }
+
+  componentWillUnmount() {
+    console.log("componentWIllUnmount - Product")
   }
 };
