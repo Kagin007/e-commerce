@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Small e-commerce app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small e-commerce app where I practice styling, props, state, routing, promises with http requests, and utilizing React class components.
+
+# Screenshots
+
+![login](https://github.com/Kagin007/e-commerce/blob/master/screenshots/login.png?raw=true)
+![customers](https://github.com/Kagin007/e-commerce/blob/master/screenshots/cuztomers.png?raw=true)
+![]
 
 ## Available Scripts
 
